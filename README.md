@@ -1,7 +1,7 @@
-# reaslistic_3D_renderer
+# Real3D
 
-Real3D is an open-source software for real-time realistic rendering.
-It allows to load reflectance maps (diffuse, specular, roughness and normal maps) in order to make photorealistic renderings in real-time. The program allows rendering and animation under point light source illumination and environment mapping.
+Real3D is an open-source software for real-time realistic renderings.
+It can load reflectance maps (diffuse, specular, roughness and normal maps) in order to make photorealistic renderings in real-time. The program allows rendering and animation under a point light source illumination and an environment map.
 
 ####VERSION
 Version 1.0
@@ -24,8 +24,8 @@ By default the program loads a phong shader. Different shaders and reflectance m
 For the environment mapping to work you will have to download the **latitude longitude maps** of the environment.
 Some are available at the following links :
 
-*http://www.pauldebevec.com/Probes/
-*http://gl.ict.usc.edu/Data/HighResProbes/
+* http://www.pauldebevec.com/Probes/
+* http://gl.ict.usc.edu/Data/HighResProbes/
 
 Create a folder called "EnvironmentMaps" in the directory where the program is compiled and name the environment maps as follows : 
 
@@ -36,20 +36,18 @@ Create a folder called "EnvironmentMaps" in the directory where the program is c
 | St Peter's Basilica | stpeters  |
 | Pisa Courtyard | pisa  |
 
-The diffuse convolution and rough specular convolutions of the environment map have to be precomputed and put in the same folder. 
-These must have the following names : 
+The diffuse convolution and rough specular convolutions of the environment map have to be precomputed and put in the same folder. These must have the following names : 
 
-*EM_diffuse 
-*EM_rough
+* EM_diffuse 
+* EM_rough
 
-where EM is the File name of your environment map.
+where EM is the file name of your environment map.
 
 For example for a rendering in the grace cathedral, three environment maps have to be in the "EnvironmentMaps" folder with the names : "grace.pfm", "grace_diffuse.pfm" and "grace_rough.pfm".
 
 ####License
 
 Real3D. Author :  Antoine TOISOUL LE CANN. Copyright © 2016 Antoine TOISOUL LE CANN. All rights reserved.
-
 
 Real3D is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. PFM_ReadWrite is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details. You should have received a copy of the GNU Lesser General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
 
