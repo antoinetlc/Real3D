@@ -11,7 +11,7 @@ Version 1.0
 This program has been compiled and tested both on Windows and Linux environments.
 It requires the following libraries/API in order to compile :
 
-* OpenGL and GLEW
+* OpenGL 4.0 and GLEW (tested with version 1.13.0)
 * OpenCV (tested with version 2.4.11)
 * Qt (tested with version 5.4)
 
@@ -62,3 +62,7 @@ Real3D is free software: you can redistribute it and/or modify it under the term
 
 * In Debug mode textures cannot be loaded due to incorrect OpenCV dlls
 * The object is not at the same distance on the screen and on a screenshot
+* 
+
+###Credits
+The design of the user interface was inspired by ShaderMaker : http://cgvr.cs.uni-bremen.de/teaching/shader_maker/.
