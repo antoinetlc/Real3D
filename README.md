@@ -60,7 +60,6 @@ Real3D is free software: you can redistribute it and/or modify it under the term
 
 ###Known Bugs
 
-* In Debug mode textures cannot be loaded due to incorrect OpenCV dlls
 * The object is not at the same distance on the screen and on a screenshot
 
 ###Credits
