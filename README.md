@@ -45,6 +45,12 @@ where EM is the file name of your environment map.
 
 For example for a rendering in the grace cathedral, three environment maps have to be in the "EnvironmentMaps" folder with the names : "grace.pfm", "grace_diffuse.pfm" and "grace_rough.pfm".
 
+
+#####User interface
+The camera can be rotated by using the mouse left click and moving the mouse. The mouse wheel makes the camera closer or further away from the origin.
+
+The light source can be translated along the x and y axis by with pressing CTRL+left mouse click and moving the mouse. It can be translated along the z axis by using CTRL and the mouse wheel.
+
 ####License
 
 Real3D. Author :  Antoine TOISOUL LE CANN. Copyright © 2016 Antoine TOISOUL LE CANN. All rights reserved.
