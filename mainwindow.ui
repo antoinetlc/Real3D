@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Open GL</string>
+   <string>Real3D</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">
