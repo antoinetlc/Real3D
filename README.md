@@ -1,7 +1,7 @@
 # Real3D
 
 Real3D is an open-source software for real-time realistic renderings.
-It can load reflectance maps (diffuse, specular, roughness and normal maps) in order to make photorealistic renderings in real-time. The program allows rendering and animation under a point light source illumination and an environment map.
+It can load reflectance maps (diffuse, specular, roughness and normal maps) in order to make photorealistic renderings in real-time. The program allows rendering and animation under a point light source and an environment map.
 
 ####VERSION
 Version 1.0
