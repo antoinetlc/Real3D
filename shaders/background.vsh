@@ -29,27 +29,35 @@
  */
 
 /**
- * \file texture.fsh
- * \brief Fragment shader for the texture mapping.
+ * \file background.vsh
+ * \brief Vertex shader to draw the background in the environment map rendering.
  * \author Antoine Toisoul Le Cann
  * \date September, 1st, 2016
  *
- * Fragment shader for the texture mapping. Maps the input texture on the geometry.
+ * Vertex shader to draw the background in the environment map rendering.
  */
 
-#version 330
-#define M_PI 3.1415926535897932384626433832795
+#version 400
 
-uniform sampler2D textureRendered;
+uniform mat4 mvMatrix;
+uniform mat4 inverseVMatrix;
+uniform mat4 pMatrix;
+uniform mat3 normalMatrix; //mv matrix without translation
 
-in vec2 varyingTextureCoordinate;
+in vec4 vertex_worldSpace;
+in vec2 textureCoordinate_input;
 
-out vec4 fragColor;
+out vec4 varyingVertex_camSpace;
+out vec2 varyingTextureCoordinate;
 
+//Vertex shader compute the vectors per vertex
 void main(void)
 {
-	fragColor = texture2D(textureRendered, varyingTextureCoordinate.st);
+    //Put the vertex in the correct coordinate system by applying the model view matrix
+    vec4 vertex_camSpace = mvMatrix*vertex_worldSpace;
+	varyingVertex_camSpace = vertex_camSpace;
+	
+	varyingTextureCoordinate = textureCoordinate_input;
+    gl_Position = pMatrix * vertex_camSpace;
 }
-
-
 

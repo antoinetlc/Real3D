@@ -149,7 +149,6 @@ void Object::setAspectRatio()
     }
 
     m_modelMatrix.scale(1.0, 1.0/aspectRatio);
-
 }
 
 /**
