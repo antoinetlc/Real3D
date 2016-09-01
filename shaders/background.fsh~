@@ -1,0 +1,36 @@
+#version 400
+
+uniform vec4 diffuseColor;
+uniform vec4 specularColor;
+uniform float diffuseCoefficient;
+uniform float specularCoefficient;
+uniform float shininess;
+
+uniform sampler2D diffuse_texture;
+uniform sampler2D specular_texture;
+uniform sampler2D normal_map;
+uniform sampler2D roughness_map;
+
+in vec3 varyingNormal_camSpace;
+in vec3 varyingLightDirection_camSpace;
+in vec3 varyingViewingDirection_camSpace;
+in vec2 varyingTextureCoordinates;
+
+out vec4 fragColor;
+
+//Fragment shader compute the final color
+void main(void)
+{
+    vec3 normal = normalize(varyingNormal_camSpace);
+    vec3 lightDirection = normalize(varyingLightDirection_camSpace);
+    vec3 viewingDirection = normalize(varyingViewingDirection_camSpace);
+ 
+    vec4 diffuseIllumination = diffuseCoefficient*diffuseColor;
+    vec4 specularIllumination = specularCoefficient*specularColor;
+
+    //Phong shading
+    //ambient+diffuse+specular
+    vec3 reflectionVector = -lightDirection -2.0*dot(normal, -lightDirection)*normal;
+    fragColor =  max(0.0, dot(normal, lightDirection))*diffuseIllumination
+            + pow(max(0.0, dot(reflectionVector, viewingDirection)), shininess)*specularIllumination;
+}

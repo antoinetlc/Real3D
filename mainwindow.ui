@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1055</width>
+    <height>938</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Open GL</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="2,1">
+      <property name="leftMargin">
+       <number>2</number>
+      </property>
+      <property name="topMargin">
+       <number>2</number>
+      </property>
+      <property name="rightMargin">
+       <number>2</number>
+      </property>
+      <property name="bottomMargin">
+       <number>2</number>
+      </property>
+      <item>
+       <widget class="GLDisplay" name="m_glWidget" native="true"/>
+      </item>
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>Log</string>
+         </attribute>
+         <widget class="QTextEdit" name="textEdit">
+          <property name="geometry">
+           <rect>
+            <x>3</x>
+            <y>0</y>
+            <width>971</width>
+            <height>281</height>
+           </rect>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_3">
+         <attribute name="title">
+          <string>Scene</string>
+         </attribute>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>10</y>
+            <width>391</width>
+            <height>261</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Reflectance maps</string>
+          </property>
+          <widget class="QLabel" name="label">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>20</y>
+             <width>91</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Diffuse map</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="m_diffuseLineEdit">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>40</y>
+             <width>271</width>
+             <height>21</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_3">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>40</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>60</y>
+             <width>101</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Specular map</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_4">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>80</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="m_specularLineEdit">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>80</y>
+             <width>271</width>
+             <height>20</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_5">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>160</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="m_normalLineEdit">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>160</y>
+             <width>271</width>
+             <height>20</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_3">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>140</y>
+             <width>111</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Roughness map</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_4">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>100</y>
+             <width>101</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Normal map</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_6">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>120</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="m_roughnessLineEdit">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>120</y>
+             <width>271</width>
+             <height>20</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="geometry">
+           <rect>
+            <x>810</x>
+            <y>200</y>
+            <width>151</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Screenshot</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton">
+          <property name="geometry">
+           <rect>
+            <x>810</x>
+            <y>240</y>
+            <width>151</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Quit</string>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="geometry">
+           <rect>
+            <x>590</x>
+            <y>10</y>
+            <width>161</width>
+            <height>261</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Environment mapping</string>
+          </property>
+          <widget class="QComboBox" name="m_EMComboBox">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>141</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>Grace Cathedral</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Uffizi Gallery</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>St Peter's Basilica</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Pisa Courtyard</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Bar</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QCheckBox" name="m_EMCheckbox">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>70</y>
+             <width>70</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Enable</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="geometry">
+           <rect>
+            <x>790</x>
+            <y>10</y>
+            <width>221</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Exposure</string>
+          </property>
+          <widget class="QLCDNumber" name="lcdNumber_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>70</y>
+             <width>151</width>
+             <height>23</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QSlider" name="horizontalSlider_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>160</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>-100</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pushButton_7">
+          <property name="geometry">
+           <rect>
+            <x>810</x>
+            <y>160</y>
+            <width>151</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Start/Stop Animation</string>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>10</y>
+            <width>181</width>
+            <height>261</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Shader</string>
+          </property>
+          <widget class="QLabel" name="label_5">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>80</y>
+             <width>81</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Fragment</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="m_vertexShaderLineEdit">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>40</y>
+             <width>101</width>
+             <height>20</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="m_fragmentShaderLineEdit">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>100</y>
+             <width>101</width>
+             <height>20</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_6">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>20</y>
+             <width>81</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Vertex</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_8">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>220</y>
+             <width>151</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Load</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_9">
+           <property name="geometry">
+            <rect>
+             <x>120</x>
+             <y>40</y>
+             <width>51</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_10">
+           <property name="geometry">
+            <rect>
+             <x>120</x>
+             <y>100</y>
+             <width>51</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>GLDisplay</class>
+   <extends>QWidget</extends>
+   <header>qt/gldisplay.h</header>
+   <container>1</container>
+   <slots>
+    <signal>updateDiffuseMapPath(QString)</signal>
+    <signal>updateSpecularMapPath(QString)</signal>
+    <signal>updateNormalMapPath(QString)</signal>
+    <signal>updateRoughnessMapPath(QString)</signal>
+    <signal>updateLog(QString)</signal>
+    <signal>updateVertexShaderPath(QString)</signal>
+    <signal>updateFragmentShaderPath(QString)</signal>
+    <slot>setXRotation(int)</slot>
+    <slot>setYRotation(int)</slot>
+    <slot>setZRotation(int)</slot>
+    <slot>updateSpectrum(QString)</slot>
+    <slot>updateObject(QString)</slot>
+    <slot>takeScreenshot()</slot>
+    <slot>changeExposure(int)</slot>
+    <slot>startStopAnimation()</slot>
+    <slot>enableEnvironmentMapping(bool)</slot>
+    <slot>chooseDiffuseMap()</slot>
+    <slot>chooseSpecularMap()</slot>
+    <slot>chooseNormalMap()</slot>
+    <slot>chooseRoughnessMap()</slot>
+    <slot>loadDiffuseMap(QString)</slot>
+    <slot>loadSpecularMap(QString)</slot>
+    <slot>loadNormalMap(QString)</slot>
+    <slot>loadRoughnessMap(QString)</slot>
+    <slot>chooseVertexShader()</slot>
+    <slot>chooseFragmentShader()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>925</x>
+     <y>908</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1000</x>
+     <y>881</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>m_glWidget</receiver>
+   <slot>takeScreenshot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>883</x>
+     <y>868</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>969</x>
+     <y>610</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdNumber_2</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>805</x>
+     <y>694</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>840</x>
+     <y>729</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>m_glWidget</receiver>
+   <slot>changeExposure(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>887</x>
+     <y>690</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>899</x>
+     <y>614</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>m_glWidget</receiver>
+   <slot>startStopAnimation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>923</x>
+     <y>809</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>925</x>
+     <y>603</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>m_glWidget</receiver>
+   <slot>chooseDiffuseMap()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>710</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>593</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>m_glWidget</receiver>
+   <slot>chooseSpecularMap()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>337</x>
+     <y>740</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>336</x>
+     <y>607</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>m_glWidget</receiver>
+   <slot>chooseNormalMap()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>356</x>
+     <y>784</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>352</x>
+     <y>609</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>m_glWidget</receiver>
+   <slot>chooseRoughnessMap()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>372</x>
+     <y>821</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>376</x>
+     <y>602</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_glWidget</sender>
+   <signal>updateDiffuseMapPath(QString)</signal>
+   <receiver>m_diffuseLineEdit</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>231</x>
+     <y>613</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>275</x>
+     <y>701</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_glWidget</sender>
+   <signal>updateSpecularMapPath(QString)</signal>
+   <receiver>m_specularLineEdit</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>246</x>
+     <y>615</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>254</x>
+     <y>752</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_glWidget</sender>
+   <signal>updateNormalMapPath(QString)</signal>
+   <receiver>m_roughnessLineEdit</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>213</x>
+     <y>617</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>227</x>
+     <y>791</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_glWidget</sender>
+   <signal>updateRoughnessMapPath(QString)</signal>
+   <receiver>m_normalLineEdit</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>182</x>
+     <y>588</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>203</x>
+     <y>824</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_diffuseLineEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>m_glWidget</receiver>
+   <slot>loadDiffuseMap(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>165</x>
+     <y>701</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>178</x>
+     <y>597</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_specularLineEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>m_glWidget</receiver>
+   <slot>loadSpecularMap(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>133</x>
+     <y>745</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>155</x>
+     <y>605</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_roughnessLineEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>m_glWidget</receiver>
+   <slot>loadNormalMap(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>118</x>
+     <y>782</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>134</x>
+     <y>604</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_normalLineEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>m_glWidget</receiver>
+   <slot>loadRoughnessMap(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>817</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>610</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_glWidget</sender>
+   <signal>updateLog(QString)</signal>
+   <receiver>textEdit</receiver>
+   <slot>insertPlainText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>141</x>
+     <y>557</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>123</x>
+     <y>652</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>clicked()</signal>
+   <receiver>m_glWidget</receiver>
+   <slot>chooseVertexShader()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>553</x>
+     <y>704</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>551</x>
+     <y>610</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_10</sender>
+   <signal>clicked()</signal>
+   <receiver>m_glWidget</receiver>
+   <slot>chooseFragmentShader()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>535</x>
+     <y>757</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>532</x>
+     <y>611</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_glWidget</sender>
+   <signal>updateVertexShaderPath(QString)</signal>
+   <receiver>m_vertexShaderLineEdit</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>486</x>
+     <y>614</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>485</x>
+     <y>712</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_glWidget</sender>
+   <signal>updateFragmentShaderPath(QString)</signal>
+   <receiver>m_fragmentShaderLineEdit</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>461</x>
+     <y>614</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>463</x>
+     <y>760</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_8</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>loadShaders()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>412</x>
+     <y>890</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>438</x>
+     <y>931</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_EMComboBox</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>loadEnvironmentMap(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>697</x>
+     <y>700</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1001</x>
+     <y>918</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_EMCheckbox</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>loadEnvironmentMap()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>653</x>
+     <y>734</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>672</x>
+     <y>932</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>loadShaders()</slot>
+  <slot>loadEnvironmentMap(QString)</slot>
+  <slot>loadEnvironmentMap()</slot>
+ </slots>
+</ui>
