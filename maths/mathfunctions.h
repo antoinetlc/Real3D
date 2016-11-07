@@ -52,8 +52,6 @@
 /*---- OpenCV ----*/
 #include <opencv2/core/core.hpp>
 
-#include <omp.h>
-
 /**
  * Clamp a number so it is in the range [inf ; sup].
  * If number<inf, then the function returns inf.

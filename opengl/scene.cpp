@@ -367,8 +367,8 @@ bool Scene::loadEnvironmentMap(const string EMPath, const string EMDiffusePath, 
 {
     //Sets the file path of the EM
     m_environmentMap = Texture(EMPath);
-    m_environmentMapRough = Texture(EMDiffusePath);
-    m_environmentMapDiffuse = Texture(EMRoughPath);
+    m_environmentMapDiffuse = Texture(EMDiffusePath);
+    m_environmentMapRough = Texture(EMRoughPath);
 
     //Load the EMs
     bool EMLoaded = m_environmentMap.load_32FC3();
