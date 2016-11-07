@@ -168,9 +168,9 @@ void main(void)
 			
 		float lightSourceDistance = length(varyingLightPosition_camSpace.xyz-varyingVertex_camSpace.xyz)/10.0;
 		float lightPower = 10.0;
-		float lightAttenuation = lightPower/(lightSourceDistance);
+		//float lightAttenuation = lightPower/(lightSourceDistance);
 			
-		fragColor += clamp(max(dot(normal,lightDirection),0.0)*diffuseColor*lightAttenuation +specularResponse, vec4(0.0,0.0,0.0,0.0), vec4(1.0,1.0,1.0,1.0));
+		fragColor += clamp(max(dot(normal,lightDirection),0.0)*diffuseColor +specularResponse, vec4(0.0,0.0,0.0,0.0), vec4(1.0,1.0,1.0,1.0));
 	}
 	else
 	{
