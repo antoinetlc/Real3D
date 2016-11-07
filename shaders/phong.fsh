@@ -1,3 +1,4 @@
+#version 400
 /*
  *     Real3D
  *
@@ -36,8 +37,6 @@
  *
  * Fragment shader for the Phong BRDF.
  */
-
-#version 400
 
 uniform vec4 diffuseColor;
 uniform vec4 specularColor;

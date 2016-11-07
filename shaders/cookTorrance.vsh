@@ -1,3 +1,4 @@
+#version 400
 /*
  *     Real3D
  *
@@ -36,8 +37,6 @@
  *
  * Vertex shader for the Cook Torrance BRDF. Also implements environment mapping.
  */
-
-#version 400
 
 uniform mat4 mvMatrix;
 uniform mat4 pMatrix;

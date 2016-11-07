@@ -1,3 +1,4 @@
+#version 400
 /*
  *     Real3D
  *
@@ -37,7 +38,6 @@
  * Fragment shader to draw the background in the environment map rendering.
  */
  
-#version 400
 #define M_PI 3.1415926535897932384626433832795
 
 uniform int timeMs;
